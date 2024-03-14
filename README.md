@@ -12,7 +12,7 @@ This Python script is a basic file scanner that searches a specified directory f
 
 
 3. **Run the Script:**
-   `python scaner.py`
+   `python scanner.py`
 
 
 4. **Enter Directory Path and Extensions:**
