@@ -5,14 +5,14 @@ This Python script is a basic file scanner that searches a specified directory f
 ### Usage
 
 1. **Clone the Repository:**
-   `git clone https://github.com/yourusername/simple-file-scanner.git`
+   `git clone https://github.com/CelestialTool/Basic-Directory-Scaner.git`
 
 2. **Navigate to the Directory:**
-   `cd simple-file-scanner`
+   `cd Basic-Directory-Scaner`
 
 
 3. **Run the Script:**
-   `python scaner`
+   `python scaner.py`
 
 
 4. **Enter Directory Path and Extensions:**
