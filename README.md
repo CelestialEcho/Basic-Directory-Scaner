@@ -1,4 +1,4 @@
-**Simple File Scanner**
+**Basic Directory Scaner**
 
 This Python script is a basic file scanner that searches a specified directory for files with specific extensions. It can be used to identify potentially suspicious files within a directory.
 
