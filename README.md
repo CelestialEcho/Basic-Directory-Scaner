@@ -26,7 +26,7 @@ This Python script is a basic file scanner that searches a specified directory f
 ### Requirements
 
 - Python 3.x
-- Operating System: Windows, Linux, macOS
+- Operating System: Windows
 
 ### Disclaimer
 
@@ -35,4 +35,8 @@ This script is for educational purposes only and provides a basic file scanning 
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+###preview
+
+[examples/example.png](example)
 
