@@ -38,5 +38,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ###preview
 
-[image](example/image.png)
+![image](example/image.png)
 
