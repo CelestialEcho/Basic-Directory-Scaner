@@ -37,5 +37,6 @@ def exploreDirectory(directory, level=0, is_last=True):
         else:
             print(f"{indent}{'┗' if is_last else '┃'}━ {Fore.GREEN}{item}")
 
-start_directory = r"D:\[C++]Projects"
+
+start_directory = input(r"input your directory (\\): ") #D:\[C++]Projects
 exploreDirectory(start_directory)
