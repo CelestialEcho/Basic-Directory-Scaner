@@ -12,7 +12,7 @@ I thought that it could be using for making a project tree, so for example you c
 1. download the file scanner.py and requirements.txt
 2. place them in 1 folder
 3. open the cmd, and go into your fodler.
-4. type command `pip install -r reqierements.txt`
+4. type command `pip install colorama` (only needed if you didn't downloaded it yet)
 5. run it ( also if you want to scan projects which are located in the system folders, you should run this file in console with admin mode)
 6. when you run it, you will asked for the directory. (you have to write your path with double slashes, like D:\\[C++}Projects\\...
 7. you will get the result
