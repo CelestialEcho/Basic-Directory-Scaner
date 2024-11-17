@@ -1,42 +1,18 @@
-**Basic Directory Scaner**
+**BDS...**
+ - just making the project tree
 
-This Python script is a basic file scanner that searches a specified directory for files with specific extensions. It can be used to identify potentially suspicious files within a directory.
+### where it could be used? (imo)
+I thought that it could be using for making a project tree, so for example you can copy it, and insert into gpt prompt, so it would understand where are different fiels located.
 
-### Usage
-
-1. **Clone the Repository:**
-   `git clone https://github.com/CelestialTool/Basic-Directory-Scaner.git`
-
-2. **Navigate to the Directory:**
-   `cd Basic-Directory-Scaner`
-
-
-3. **Run the Script:**
-   `python scanner.py`
-
-
-4. **Enter Directory Path and Extensions:**
-- Enter the directory path you want to scan when prompted.
-- Enter the file extensions you want to scan, separated by commas and spaces.
-
-5. **View Results:**
-- If suspicious files are found, their paths will be displayed.
-- If no suspicious files are found, a message indicating so will be shown.
-
-### Requirements
-
-- Python 3.x
-- Operating System: Windows
-
-### Disclaimer
-
-This script is for educational purposes only and provides a basic file scanning functionality. It may not detect all types of suspicious files or malware. Use it at your own risk.
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-###preview
-
+### preview!
 ![image](example/image.png)
 
+### how to use?
+
+1. download the file scanner.py and requirements.txt
+2. place them in 1 folder
+3. open the cmd, and go into your fodler.
+4. type command `pip install -r reqierements.txt`
+5. run it ( also if you want to scan projects which are located in the system folders, you should run this file in console with admin mode)
+6. when you run it, you will asked for the directory. (you have to write your path with double slashes, like D:\\[C++}Projects\\...
+7. you will get the result
