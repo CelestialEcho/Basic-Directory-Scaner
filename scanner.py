@@ -1,20 +1,41 @@
 import os
+from colorama import *
+from pathlib import Path
 
-def scan_directory(directory, extensions):
-    suspicious_files = []  # Initialize an empty list to store suspicious files
-    for root, dirs, files in os.walk(directory):  # Iterate over the directory tree using os.walk
-        for file in files:  # Iterate over files in the current directory
-            if file.endswith(extensions):  # Check if the file has one of the specified extensions
-                suspicious_files.append(os.path.join(root, file))  # Add the full path of suspicious files to the list
-    return suspicious_files  # Return the list of suspicious files
+init(autoreset=True)
 
-if __name__ == "__main__":
-    directory_to_scan = input("Enter the directory path to scan: ")
-    extensions_to_scan = input("Enter the file extensions to scan (comma-separated with spaces): ").split(", ")
-    suspicious_files = scan_directory(directory_to_scan, tuple(extensions_to_scan))
-    if suspicious_files:
-        print("The following suspicious files were found:")
-        for file in suspicious_files:
-            print(file)
-    else:
-        print("No suspicious files were found.")
+def getItems(directory):
+    items = []
+    path = Path(directory)
+    
+    if not path.exists():
+        return items
+    
+    for item in path.iterdir():
+        if item.is_dir():
+            items.append(f"~{item.name}")
+        elif item.is_file():
+            name, ext = item.stem, item.suffix
+            items.append(f"{name}{ext}")
+    
+    return items
+
+def exploreDirectory(directory, level=0, is_last=True):
+    indent = "    " * level
+    items = getItems(directory)
+    
+    if not items:
+        return
+    
+    for i, item in enumerate(items):
+        if item.endswith(".dll") or item.endswith(".sys") or item.endswith(".Msi"):
+            print(f"{indent}{'┗' if is_last else '┃'}━ {Fore.RED}{item}")
+        elif item[0] == "~":
+            print(f"{indent}{'┗' if is_last else '┗'} {Fore.YELLOW}{item}/")
+            subdirectory_path = os.path.join(directory, item[1:])
+            exploreDirectory(subdirectory_path, level + 1, is_last=(i == len(items) - 1))
+        else:
+            print(f"{indent}{'┗' if is_last else '┃'}━ {Fore.GREEN}{item}")
+
+start_directory = r"D:\[C++]Projects"
+exploreDirectory(start_directory)
